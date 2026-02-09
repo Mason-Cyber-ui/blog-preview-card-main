@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Blog Preview Card</title>
+
+  <!-- Figtree font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,500;0,800;1,500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <style>
+    /* 
+       CUSTOM STYLES
+       Bootstrap handles layout, but these specifics match the design file 
+    */
+    
+    body {
+      background-color: #F4D04E; /* The specific design Yellow */
+      font-family: 'Figtree', sans-serif;
+    }
+
+    .card {
+      /* The "Hard" shadow offset */
+      box-shadow: 8px 8px 0px 0px #000000;
+      transition: box-shadow 0.2s ease;
+    }
+
+    /* Optional: Hover effect to move shadow */
+    .card:hover {
+      box-shadow: 12px 12px 0px 0px #000000;
+    }
+
+    /* Title Hover Color */
+    .title-hover:hover {
+      color: #F4D04E !important; /* Bootstrap yellow match */
+      cursor: pointer;
+    }
+    
+    /* Ensure the badge text is the correct dark color */
+    .badge-yellow {
+      background-color: #F4D04E;
+      color: #111;
+    }
+  </style>
+</head>
+
+<!-- 
+  Bootstrap Utilities used:
+  - d-flex, align-items-center, justify-content-center: Centers card on screen
+  - min-vh-100: Full height
+  - py-5: Adds vertical padding so card doesn't touch edges on small screens
+-->
+<body class="d-flex align-items-center justify-content-center min-vh-100 py-5">
+
+  <!-- 
+    Card Adjustments:
+    - border-dark: Adds the black border
+    - border-1: Ensures border width
+    - rounded-4: Large corner radius
+  -->
+  <article class="card border border-dark border-1 rounded-4 overflow-hidden mx-3" style="max-width: 384px;">
+    
+    <!-- Image Container with padding to look like the design -->
+    <div class="p-4 pb-0">
+      <img src="C:\Users\User\OneDrive\Documents\WDE\sb 326\blog-preview-card-main\assets\images\illustration-article.svg" class="card-img-top rounded-4 border border-0" alt="Illustration for HTML & CSS foundations blog post">
+    </div>
+
+    <div class="card-body p-4">
+      <!-- 
+        Badge: 
+        - text-bg-warning: Bootstrap's yellow background utility 
+        - rounded-2: Slightly rounded corners (design isn't fully pill-shaped)
+      -->
+      <span class="badge text-bg-warning rounded-2 px-3 py-2 mb-3 fw-bold text-dark">Learning</span>
+
+      <p class="small mb-3 fw-medium">Published 21 Dec 2023</p>
+
+      <!-- Title -->
+      <h1 class="card-title fw-extra-bold mb-3 fs-3 fw-bolder title-hover">HTML & CSS foundations</h1>
+
+      <!-- Description: text-secondary for gray color -->
+      <p class="mb-4 text-secondary" style="font-size: 16px; line-height: 1.5;">
+        These languages are the backbone of every website, defining structure, content, and presentation.
+      </p>
+
+      <!-- Author -->
+      <div class="d-flex align-items-center">
+        <img src="C:\Users\User\OneDrive\Documents\WDE\sb 326\blog-preview-card-main\assets\images\image-avatar.webp" alt="Greg Hooper" class="rounded-circle me-3" width="32" height="32">
+        <span class="fw-bold fs-6">Greg Hooper</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
